@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>NU GWA Calculator</title>
+</head>
+<body>
+  <div class="main-container">
+    <h1>NU GWA Calculator</h1>
+    <div class="scroller-container">
+      <table class="table-container">
+        <tr class="header-row-container">
+          <th>Course Name</th>
+          <th>Grades</th>
+          <th>Units</th>
+          <th></th>
+        </tr>
+        <tr class="data-row-container">
+          <td><input type="text" placeholder="Course 1" class="course-numbering-cell"></td>
+          <td><input type="text"></td>
+          <td><input type="text"></td>
+          <td><button class="delete-course-button">✕</button></td>
+        </tr>
+      </table>
+    </div>
+    <div class="buttons-container">
+      <div class="adjacent-buttons-container">
+        <button class="add-course-button">Add Course</button>
+        <button class="reset-button">⟲</button>
+      </div>
+      <button class="calculate-button">Calculate</button>
+    </div>
+  </div>
+  <div class="modal-container">
+    <div class="modal-content">
+      <h1>GWA: 0.00</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing</p>
+      <button class="modal-close-button">Close</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

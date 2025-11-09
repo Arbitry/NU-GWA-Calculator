@@ -1,0 +1,249 @@
+/* universal and body */
+* {
+    /* outline: 2px solid red; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+
+    background-color: rgb(53 64 142);
+    color: rgb(53 64 142);
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* main-container and table */
+.main-container {
+    height: auto;
+    width: 90%;
+    max-width: 710px;
+
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1.5em;
+    padding-top: 2.5em;
+}
+
+.main-container h1 {
+    font-size: clamp(20px, 8vw, 32px);
+}
+
+.scroller-container {
+    width: 100%;
+}
+
+.table-container {
+    box-sizing: border-box;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: center;
+}
+
+.header-row-container th, .data-row-container td {
+    border: 1px solid rgb(36, 36, 36);
+    font-size: clamp(12px, 4vw, 16px);
+
+}
+
+.header-row-container {
+    background-color: #FFD700;
+    height: 50px;
+    font-weight: bolder;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.data-row-container {
+    height: 55px;
+}
+
+.header-row-container th:nth-child(4), 
+.data-row-container td:nth-child(4) {
+    width: 50px;
+}
+
+.header-row-container th:nth-child(4) {
+    background-color: white;
+    border: none;
+}
+
+.data-row-container td:nth-child(4) {
+    background-color: red;
+    border-left: none;
+}
+
+
+/* buttons */
+button {
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: clamp(14px, 6vw, 23px);
+    font-weight: bold;
+}
+
+.delete-course-button {
+    background-color: red;
+    width: 35px;
+    height: 35px;
+}
+
+.buttons-container {
+    height: 118px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.adjacent-buttons-container {
+    height: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-course-button {
+    width: 74%;
+    background-color: rgb(53 64 142);
+}
+
+.reset-button {
+    width: 25%;
+    background-color: red;
+}
+
+.calculate-button {
+    height: 55%;
+    background-color: #2C3575;
+    font-size: clamp(16px, 6vw, 25px);
+}
+
+
+/* button hover */
+button:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.delete-course-button:hover, .reset-button:hover {
+    background-color: rgb(132, 7, 7);
+}
+
+.add-course-button:hover {
+    background-color: #1c2569;
+}
+
+.calculate-button:hover {
+    background-color: #19236f;
+}
+
+
+/* inputs */
+input {
+    height: 35px;
+    width: 70%;
+
+    max-width: 100px;
+    min-width: 50px;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.6);
+    font-size: clamp(12px, 3vw, 16px);
+}
+
+.course-numbering-cell {
+    border: none;
+}
+
+input:hover {
+    border: 2px solid #3f51d5;
+}
+
+input:focus {
+    opacity: 90%;
+}
+
+input::placeholder {
+    color: black;
+    opacity: 100%;
+}
+
+input:focus::placeholder {
+    opacity: 20%;
+}
+
+
+/* dynamic CSS - scrolling logic */
+.scroller-container {
+    overflow-y: hidden;
+}
+
+.scroller-enabled {
+    overflow-y: scroll;
+}
+
+
+/* modal */
+.modal-container {
+    height: 100vh;
+    width: 100vw;
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+
+}
+
+.modal-content {
+    height: 35%;
+    width: 95%;
+    max-width: 470px;
+    
+    background-color: white;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+}
+
+.modal-close-button {
+    max-height: 30px;
+    height: 25%;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    background-color:rgb(53 64 142);
+}
+
+.modal-content p {
+    text-align: center;
+}
