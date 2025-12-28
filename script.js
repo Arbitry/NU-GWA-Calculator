@@ -151,8 +151,8 @@ function modalDisplay({gwa, eligible}) {
     } else if (eligible && gwa > 3.25) {
         congratsMessage.textContent = "Congrats, you achieved Dean's Lister second honors!"
     } else {
-        congratsMessage.textContent = `You need a minimum GWA of 3.25, as well as, no individual grades lower than 2.5.
-                                       Aus lang yan, kahit naman si Lebron James 'di nagcchampion kada taon Bawi tau 
+        congratsMessage.textContent = `You need a minimum GWA of 2.25, as well as, no individual grades lower than 2.5.
+                                       Aus lang yan, kahit naman si Lebron James 'di nagcchampion kada taon. Bawi tau 
                                        niyan next sem!`
     }
 
@@ -165,5 +165,6 @@ function displayGWA() {
     const result = calculateGWA()
     modalDisplay(result)
 }
+
 
 calculateButton.addEventListener("click", displayGWA)
