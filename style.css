@@ -7,7 +7,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 100dvh;
 
     background-color: rgb(53 64 142);
     color: rgb(53 64 142);
@@ -246,4 +246,5 @@ input:focus::placeholder {
 
 .modal-content p {
     text-align: center;
+
 }
