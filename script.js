@@ -146,9 +146,9 @@ function modalDisplay({gwa, eligible}) {
 
     const congratsMessage = modalContent.querySelector("p")
 
-    if (eligible && gwa > 3.50) {
+    if (eligible && gwa => 3.50) {
         congratsMessage.textContent = "Congrats, you achieved Dean's Lister first honors!"
-    } else if (eligible && gwa > 3.25) {
+    } else if (eligible && gwa => 3.25) {
         congratsMessage.textContent = "Congrats, you achieved Dean's Lister second honors!"
     } else {
         congratsMessage.textContent = `You need a minimum GWA of 3.25, as well as, no individual grades lower than 2.5.
